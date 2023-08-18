@@ -1001,7 +1001,6 @@ function gsapAnimations() {
           trigger: element,
           start: 'top 80%',
           end: 'bottom top',
-          markers: true,
         },
       })
 

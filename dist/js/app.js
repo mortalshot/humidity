@@ -8445,8 +8445,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     scrollTrigger: {
                         trigger: element,
                         start: "top 80%",
-                        end: "bottom top",
-                        markers: true
+                        end: "bottom top"
                     }
                 });
                 if (elementImageThumb) articlesItemsTimeline.to(elementImageThumb, {
