@@ -1,0 +1,43 @@
+// Базовые стили спойлеров
+// Сниппет (HTML): spoller
+.spollers {
+	display: grid;
+	align-content: flex-start;
+	row-gap: rem(48);
+	
+	// .spollers__item
+	&__item {
+	}
+
+	// .spollers__title
+	&__title {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: rem(16);
+		font-weight: 500;
+		font-size: rem(14);
+		line-height: math.div(18, 14);
+		text-align: left;
+
+		._spoller-init & {
+			&::after {
+				content: "\e901";
+				@extend %ic;
+				font-size: rem(24);
+				transition: $transition ease transform 0s;
+			}
+
+			&._spoller-active {
+				&::after {
+					transform: rotate(45deg);
+				}
+			}
+		}
+	}
+
+	// .spollers__body
+	&__body {
+		margin-top: rem(24);
+	}
+}

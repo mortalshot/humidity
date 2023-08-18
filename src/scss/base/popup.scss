@@ -1,0 +1,152 @@
+// popup ====================================================================================================
+
+body::after {
+	content: "";
+	background-color: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity 0.8s ease 0s;
+	pointer-events: none;
+	z-index: 149;
+}
+.popup-show body::after {
+	opacity: 1;
+}
+
+// .popup ====================================================================================================
+.popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	padding: 30px 10px;
+	transition: visibility 0.8s ease 0s;
+	visibility: hidden;
+	pointer-events: none;
+
+	// .popup_show
+	&_show {
+		z-index: 150;
+		visibility: visible;
+		overflow: auto;
+		pointer-events: auto;
+
+		.popup__content {
+			visibility: visible;
+			transform: scale(1);
+		}
+	}
+
+	// .popup__wrapper
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		min-height: 100%;
+		flex: 1 1 auto;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	// .popup__content
+	&__content {
+		visibility: hidden;
+		transform: scale(0);
+		transition: transform 0.3s ease 0s;
+		width: 100%;
+		max-width: rem(732);
+		background-color: $White;
+		box-shadow: 2px 4px 20px 0px rgba(6, 2, 46, 0.2);
+
+		.lock & {
+			visibility: visible;
+		}
+	}
+
+	// .popup__close
+	&__close {
+		position: absolute;
+		top: rem(16);
+		right: rem(16);
+		outline: none;
+
+		@media (any-hover: hover) {
+			transition: $transition ease transform 0s;
+			&:hover {
+				transform: rotate(90deg);
+			}
+		}
+	}
+
+	// .popup__text
+	&__text {
+	}
+
+	// .popup__video
+	&__video {
+		display: flex;
+		position: relative;
+		padding-bottom: percent(502, 732);
+
+		iframe {
+			display: flex;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+// #video ====================================================================================================
+#video {
+	.popup__content {
+		background-color: transparent;
+	}
+}
+
+// .popup-request ====================================================================================================
+.popup-request {
+	// .popup-request__row
+	&__row {
+		display: grid;
+		grid-template-columns: percent(292, 732) 1fr;
+	}
+
+	// .popup-request__image
+	&__image {
+		position: relative;
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	// .popup-request__main
+	&__main {
+		padding: rem(60) rem(44);
+		display: grid;
+		row-gap: rem(40);
+	}
+
+	// .popup-request__head
+	&__head {
+		color: $Curasao;
+	}
+
+	// .popup-request__body
+	&__body {
+	}
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Видео"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page">
+      <section class="template13">
+        <div class="template13__container">
+          <div class="template13__head">
+            <div class="template8-2__row">
+              <div class="template8-2__left">
+                <div class="template8-2__head">
+                  <div class="template8-2__title">Полезное</div>
+
+                  <nav class="template13__menu template13-menu" data-da=".template13__head, 575, last">
+                    <ul>
+                      <li><a href="archive-articles.html">Статьи</a></li>
+                      <li><a href="archive-news.html">Новости</a></li>
+                      <li><a href="archive-promotions.html">Акции</a></li>
+                      <li class="current-menu-item"><a href="archive-video.html">Видео</a></li>
+                      <li><a href="faq.html">Вопрос-ответ</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+              <div class="template8-2__right">
+                <h4 class="template8__caption">Полезное</h4>
+
+                <div class="template7-item__details">
+                  <div class="template7-item__details-item template7-details">
+                    <div class="template7-details__body">
+                      <div class="template7-details__text _content">
+                        <p>Узнайте все о увлажнении воздуха, следите за акциями и новостями нашей компании и получайте наивыгоднейшие предложения.</p>
+                      </div>
+                    </div>
+                    <div class="template7-details__link">
+                      <div class="link-more"><a href="" data-popup="#request">Задать вопрос</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="template13__main">
+            <div class="articles">
+              <div class="template9__heading _heading _content">
+                <h2>Видео</h2>
+              </div>
+
+              <div class="articles__items">
+                <article class="articles__item articles-item">
+                  <div class="articles-item__wrapper">
+                    <a class="articles-item__preview" data-popup="#video" data-popup-youtube="i6X6DBulLvw">
+                      <div class="image-thumb"></div>
+                      <img src="@img/images/article-1-preview-1.jpg" alt="">
+                    </a>
+                    <div class="articles-item__body">
+                      <div class="articles-item__title link-more"><a href="single-articles.html">Что такое влажность воздуха?</a></div>
+                      <div class="articles-item__date"> 20.07.2023 </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="articles__item articles-item">
+                  <div class="articles-item__wrapper">
+                    <a class="articles-item__preview" data-popup="#video" data-popup-youtube="i6X6DBulLvw">
+                      <div class="image-thumb"></div>
+                      <img src="@img/images/article-2-preview-1.jpg" alt="">
+                    </a>
+                    <div class="articles-item__body">
+                      <div class="articles-item__title link-more"><a href="single-articles.html">Что такое влажность воздуха?</a></div>
+                      <div class="articles-item__date"> 20.07.2023 </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div class="pagination-wrapper">
+                <nav class="navigation pagination" aria-label="Posts">
+                  <div class="nav-links">
+                    <span aria-current="page" class="page-numbers current">1</span>
+                    <a class="page-numbers" href="">2</a>
+                    <a class="page-numbers" href="">3</a>
+                    <span class="page-numbers" href="">...</span>
+                    <a class="page-numbers" href="">20</a>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_popup.htm',{})
+  @@include('html/_js.htm',{})
+</body>
+
+</html>

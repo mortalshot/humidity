@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Страница не найдена"
+})
+
+<body class="error404">
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page">
+      <section class="error">
+        <div class="error__container">
+          <div class="error__main">
+            <div class="error__head">
+              <div class="error__text _content title-h4">
+                <p>Наши приборы вышли из строя, здесь слишком сухо! Нужно вернуться назад.</p>
+              </div>
+
+              <div class="error__link">
+                <div class="link-more"><a href="">Вернуться назад</a></div>
+              </div>
+            </div>
+
+            <div class="error__image">
+              <img src="@img/images/error-image.png" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  @@include('html/_popup.htm',{})
+  @@include('html/_js.htm',{})
+</body>
+
+</html>
